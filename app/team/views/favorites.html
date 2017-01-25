@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-12 group-block" ng-show="vm.favorite_teams.length > 0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>FLAG</td>
+                    <td><a ng-click="vm.sortType = 'team'; vm.sortReverse = !vm.sortReverse">TEAM</a></td>
+                    <td>LEAGUE</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" team in vm.favorite_teams | filter : search | orderBy:vm.sortType:vm.sortReverse ">
+                    <td><img ng-src="{{team.crestURI}}" class="logo" ng-show="team.crestURI" /></td>
+                    <td><a href="" ng-click="vm.openModalTeam(team,team.isGroup)"><strong>{{team.teamName}}{{team.team}}</strong></a></td>
+                    <td><a  ui-sref="league({leagueId: team.leagueId})">{{team.leagueName}}</a></td>
+                    <td><a href="" ng-click="vm.openModalMatches(team,team.isGroup)"><strong>Matches</strong></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="alert alert-danger" ng-show="vm.favorite_teams.length == 0">
+        <strong>No favorite teams selected!</strong>
+    </div>
+</div>

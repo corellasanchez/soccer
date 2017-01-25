@@ -1,0 +1,11 @@
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <img ng-src="{{team.crestURI}}" class="fixtures_logo" ng-show="team.crestURI" />
+            <h2 class="modal-title confirm" id="modal-title"> <strong>{{team.teamName}}{{team.team}}</strong> was added to your favorite teams</h2>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="cancel()">OK</button>
+</div>

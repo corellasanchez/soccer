@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-12 group-block">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><a ng-click="vm.sortType = 'pos'; vm.sortReverse = !vm.sortReverse">POS</a></td>
+                    <td>FLAG</td>
+                    <td><a ng-click="vm.sortType = 'team'; vm.sortReverse = !vm.sortReverse">TEAM</a></td>
+                    <td><a ng-click="vm.sortType = 'wins'; vm.sortReverse = !vm.sortReverse">W</a></td>
+                    <td><a ng-click="vm.sortType = 'losses'; vm.sortReverse = !vm.sortReverse">L</a></td>
+                    <td><a ng-click="vm.sortType = 'draws'; vm.sortReverse = !vm.sortReverse">D</a></td>
+                    <td><a ng-click="vm.sortType = 'pts'; vm.sortReverse = !vm.sortReverse">PTS</a></td>
+                    <td>ADD TO FAVORITES</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" team in vm.standing | filter : search | orderBy:vm.sortType:vm.sortReverse ">
+                    <td>{{team.position}}</td>
+                    <td><img ng-src="{{team.crestURI}}" class="logo" ng-show="team.crestURI" /></td>
+                    <td><a href="" ng-click="vm.openModalTeam(team)"><strong>{{team.teamName}}</strong></a></td>
+                    <td>{{team.wins}}</td>
+                    <td>{{team.losses}}</td>
+                    <td>{{team.draws}}</td>
+                    <td>{{team.points}}</td>
+                    <td><button class="btn btn-primary" type="button" ng-click="vm.addFavorite(team)"><span class="glyphicon glyphicon-star"></span></button></td>
+                    <td><a href="" ng-click="vm.openModalMatches(team)"><strong>Matches</strong></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

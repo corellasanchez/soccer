@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-9 pull-left">
+        <span class="section_title">{{vm.league_details.leagueCaption}}</span>
+    </div>
+    <div class="col-md-3 pull-right">
+        <input type="text" ng-model="search" class="form-control search" placeholder="Search">
+    </div>
+</div>
+<!-- Include the league layout depending if has groups or not -->
+<div ng-include="vm.league_layout"></div>
+

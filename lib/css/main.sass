@@ -1,0 +1,127 @@
+@import 'https://fonts.googleapis.com/css?family=Rajdhani|Open+Sans:200,300'
+
+$default_color: #004080
+$default_font: 'Open Sans',Arial,Helvetica,Sans-Serif
+$main_title_font: 'Rajdhani', sans-serif
+$main_title_size: 4em
+$break-tablet: 1024px
+
+
+body  
+	background: url('../img/background.jpg') no-repeat center center fixed 
+	background-size: cover 
+	color: #fff 
+	background-color: #333 
+	font-family: $default_font 
+
+.search 
+	margin-bottom: 20px	 
+
+.main_title
+	color: $default_color
+	font-family: $main_title_font
+	font-size: $main_title_size
+	margin-top: 90px
+
+.section_title
+	font-family: $main_title_font
+	color: $default_color
+	font-size: 2.8em
+	line-height: 1em
+
+.modal-title	
+	color: $default_color
+	font-family: $main_title_font
+	font-size: 3em
+.info-block  
+	background-color: rgba(26,40,85,0.8) 
+	display: block 
+	min-height: 200px
+	padding: 5px 30px 30px 30px
+	margin: 0 15px
+	margin-top: 1px
+	h1
+		font-family: $main_title_font
+		padding-left: 12px
+		font-size: 2em
+	.title
+		font-size: 16px
+		display: block
+		text-align: center
+		background-color: rgba(255,255,252,0.9) 
+		color: $default_color
+	.text
+		font-size: 30px
+		text-align: center
+		display: block
+		background-color: rgba(25,127,252,0.9)
+	a
+		text-decoration: none
+		font-size: 1.2em
+		display: block
+		margin-top: 15px
+ 
+@media screen and (max-width: $break-tablet) 
+	.info-block
+		min-height: 420px
+
+.group-block  
+	background-color: rgba(26,40,85,0.8) 
+	min-height: 240px
+	border: solid 1px #FFF
+	text-align: center
+	.logo
+		height: 30px
+		width: auto
+		padding: 0px 10px 5px 0px
+	h1
+		font-size: 1.8em
+	a
+		background-color: transparent
+		color: #FFFFFF
+		text-decoration: none
+.details_logo
+	max-width: 200px
+	height: auto
+.details_table
+	color: $default_color
+	thead
+		tr
+			background-color: #222222
+			td
+				color: #FFF
+			td a
+				font-weight: bold
+				color: #FFF
+				text-decoration: none
+				text-transform: uppercase
+	.goals
+		background-color: #222222
+		color: #FFF
+		padding: 8px
+		margin-right: 5px
+.modal-body
+	h2
+		color: $default_color
+		font-family: $main_title_font
+		font-size: 1.5em
+.fixtures_logo
+	max-width: auto
+	height: 60px
+	float: left
+	padding-right: 10px
+.confirm
+	padding-top: 15px
+.navbar-inverse 
+	.navbar-nav li a
+		color: #FFFFFF
+footer
+	min-height: 50px
+
+  
+
+
+ 
+ 
+
+ 

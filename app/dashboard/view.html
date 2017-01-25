@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-3 pull-left">
+        <span class="section_title">Dashboard</span>
+    </div>
+    <div class="col-md-3 pull-right">
+        <input type="text" ng-model="search" class="form-control search" placeholder="Search">
+    </div>
+</div>
+<div class="row">
+    <div class="info-block" ng-repeat="league in vm.leagues | filter : search">
+        <h1>{{league.caption}}</h1>
+        <div class="column col-md-3">
+            <span class="title">Number of teams</span>
+            <span class="text">{{league.numberOfTeams}}</span>
+        </div>
+        <div class="column col-md-3">
+            <span class="title">Current match day</span>
+            <span class="text">{{league.currentMatchday}}</span>
+        </div>
+        <div class="column col-md-3">
+            <span class="title">Total match days</span>
+            <span class="text">{{league.numberOfMatchdays}}</span>
+        </div>
+        <div class="column col-md-3">
+            <span class="title">Total games</span>
+            <span class="text">{{league.numberOfGames}}</span>
+           <a ui-sref="league({leagueId: league.id})" class="pull-right btn btn-default">Details</a>   
+        </div>
+  
+    </div>
+</div>

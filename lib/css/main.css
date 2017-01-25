@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Rajdhani|Open+Sans:200,300);
+body {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  background-color: #333333;
+  font-family: "Open Sans", Arial, Helvetica, Sans-Serif; }
+
+.search {
+  margin-bottom: 20px; }
+
+.main_title {
+  color: #004080;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 4em;
+  margin-top: 90px; }
+
+.section_title {
+  font-family: "Rajdhani", sans-serif;
+  color: #004080;
+  font-size: 2.8em;
+  line-height: 1em; }
+
+.modal-title {
+  color: #004080;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3em; }
+
+.info-block {
+  background-color: rgba(26, 40, 85, 0.8);
+  display: block;
+  min-height: 200px;
+  padding: 5px 30px 30px 30px;
+  margin: 0 15px;
+  margin-top: 1px; }
+  .info-block h1 {
+    font-family: "Rajdhani", sans-serif;
+    padding-left: 12px;
+    font-size: 2em; }
+  .info-block .title {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 255, 252, 0.9);
+    color: #004080; }
+  .info-block .text {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    background-color: rgba(25, 127, 252, 0.9); }
+  .info-block a {
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    margin-top: 15px; }
+
+@media screen and (max-width: 1024px) {
+  .info-block {
+    min-height: 420px; } }
+.group-block {
+  background-color: rgba(26, 40, 85, 0.8);
+  min-height: 240px;
+  border: solid 1px white;
+  text-align: center; }
+  .group-block .logo {
+    height: 30px;
+    width: auto;
+    padding: 0px 10px 5px 0px; }
+  .group-block h1 {
+    font-size: 1.8em; }
+  .group-block a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none; }
+
+.details_logo {
+  max-width: 200px;
+  height: auto; }
+
+.details_table {
+  color: #004080; }
+  .details_table thead tr {
+    background-color: #222222; }
+    .details_table thead tr td {
+      color: white; }
+    .details_table thead tr td a {
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .details_table .goals {
+    background-color: #222222;
+    color: white;
+    padding: 8px;
+    margin-right: 5px; }
+
+.modal-body h2 {
+  color: #004080;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em; }
+
+.fixtures_logo {
+  max-width: auto;
+  height: 60px;
+  float: left;
+  padding-right: 10px; }
+
+.confirm {
+  padding-top: 15px; }
+
+.navbar-inverse .navbar-nav li a {
+  color: white; }
+
+footer {
+  min-height: 50px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,102 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title"> {{team.teamName}} {{team.team}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1"> <img ng-src="{{team.crestURI}}" class="details_logo" ng-show="team.crestURI" /> </div>
+        <div class="col-md-6">
+            <h2>Overall</h2>
+            <table class="table details_table">
+                <thead>
+                    <tr>
+                        <td>PG</td>
+                        <td>GF</td>
+                        <td>GA</td>
+                        <td>GD</td>
+                        <td>PTS</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{team.playedGames}}</td>
+                        <td>{{team.goals}}</td>
+                        <td>{{team.goalsAgainst}}</td>
+                        <td>{{team.goalDifference}}</td>
+                        <td>{{team.points}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Home</h2>
+            <table class="table details_table">
+                <thead>
+                    <tr>
+                        <td>W</td>
+                        <td>L</td>
+                        <td>D</td>
+                        <td>GF</td>
+                        <td>GA</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{team.home.wins}}</td>
+                        <td>{{team.home.losses}}</td>
+                        <td>{{team.home.draws}}</td>
+                        <td>{{team.home.goals}}</td>
+                        <td>{{team.home.goalsAgainst}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Away</h2>
+            <table class="table details_table">
+                <thead>
+                    <tr>
+                        <td>W</td>
+                        <td>L</td>
+                        <td>D</td>
+                        <td>GF</td>
+                        <td>GA</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{team.away.wins}}</td>
+                        <td>{{team.away.losses}}</td>
+                        <td>{{team.away.draws}}</td>
+                        <td>{{team.away.goals}}</td>
+                        <td>{{team.away.goalsAgainst}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" ng-show="team_players.count > 0">
+        <div class="col-md-10 col-md-offset-1">
+            <h2>Team Players: {{team_players.count}}</h2>
+            <table class="table details_table">
+                <thead>
+                    <tr>
+                        <td><a ng-click="sortType = 'name'; sortReverse = !sortReverse">Name</a></td>
+                        <td><a ng-click="sortType = 'position'; sortReverse = !sortReverse">Position</a></td>
+                        <td><a ng-click="sortType = 'number'; sortReverse = !sortReverse">Number</a></td>
+                        <td><a ng-click="sortType = 'age'; sortReverse = !sortReverse">Age</a></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="player in team_players.players | orderBy:sortType:sortReverse">
+                        <td>{{player.name}}</td>
+                        <td>{{player.position}}</td>
+                        <td>{{player.jerseyNumber}}</td>
+                        <td>{{player.age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="alert alert-danger" ng-show="team_players.count == 0">
+        <strong>No players info available for this team!</strong>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Close</button>
+</div>
